@@ -1,0 +1,830 @@
+Data :
+
+1 Version Control
+2 Executive Summary
+3. Required Documentation
+4. Change Description
+4.1 Roaming charge band changes
+4.2 Country name changes
+5. OCS price group Scope for Roaming in Band-18
+6 OCS Change Areas
+6.1 Countries to roaming zone mapping
+6.2 Config Touch-points given in Section 5
+6.3 Update Country Name details
+7 Validations
+8. Appendix
+Appendix 1 - Reference
+1 Version Control
+Version
+
+Date
+
+Creator
+
+Description
+
+0.1
+
+Nov 6, 2024 
+
+Naveen Kumar
+
+Initial draft
+
+0.2
+
+May 21, 2025 
+
+Naveen Kumar
+
+added column "Config Touch points for B2B/SIMO"
+
+1.0
+
+May 22, 2025 
+
+Naveen Kumar
+
+Release for team's review 
+
+2 Executive Summary
+The business would like to move roaming price band for following destinations:   Mobile - Roaming Rate Updates PLM-284
+
+Grenada, Macedonia and Saint Vincent move from Band 8 to Band 18
+
+Also, Macedonia naming convention change to North Macedonia - https://devex-issuehub.at.sky/browse/PLM-371
+
+3. Required Documentation
+#
+
+List of Documents
+
+1
+
+Sky Mobile Price List -
+
+PLM-284 - Sky Mobile Price List v14.5_20241114.xlsx
+
+PLM-371 - Sky Mobile Price List v15.3_20250320.xlsx
+
+2
+
+SIMO price list - https://skyglobal.sharepoint.com/:x:/r/sites/Sky-AmdocsChargingFulfilment/Shared%20Documents/Business%20Mobile/Amdocs%20Analysis/2%20-%20Scoping/OCS/CRTC2403-165%20-%20OCS%20ex-VAT%20handling/Mobile%20Pricing%20Document%20-%20Clean%20%20-%20Copy.xlsx?d=wf5064d0fb5b94e75aedf3be0533bca8e&csf=1&web=1&e=4p5z12
+
+3
+
+PLM Jira dashboard -
+
+https://devex-issuehub.at.sky/secure/Dashboard.jspa
+
+4
+
+SCTASK2205259
+
+4. Change Description
+4.1 Roaming charge band changes
+Country Code
+
+Country Name
+
+As Is Roaming Band
+
+To Be Roaming Band
+
+Reference
+
+GRD
+
+Grenada
+
+8
+
+18
+
+PLM-284 PH2
+
+MKD
+
+Macedonia
+
+8
+
+18
+
+PLM-284 PH2
+
+VCT
+
+Saint Vincent and the Grenadines
+
+8
+
+18
+
+PLM-284 PH2
+
+4.2 Country name changes
+Country Code
+
+As Is Country Name
+
+To Be Country Name
+
+Reference
+
+MKD
+
+Macedonia
+
+North Macedonia
+
+PLM-371 
+
+5. OCS price group Scope for Roaming in Band-18
+#
+
+Scoping elements
+
+Config Touch points for UK Retail
+
+Config Touch points for B2B/SIMO
+
+Functional scenario
+
+1
+
+Data Usage
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → Data Roaming outside of EU EEA row
+
+Sky Business Default International and Roaming Rates → B2B Roaming outside of EU EEA → Data Roaming outside of EU EEA row
+
+Data Roaming rating in ROW outside of EU EEA
+
+ 2
+
+Receiving Call (MT)
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → MT Roaming outside of EU EEA row
+
+Sky Business Default International and Roaming Rates → B2B Roaming outside of EU EEA → MT Roaming outside of EU EEA row
+
+Roaming MT charge
+
+ 3
+
+Outgoing call (MO)
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → MO Roaming outside of EU EEA row
+
+Sky Business Default International and Roaming Rates → B2B Roaming outside of EU EEA → MO Roaming outside of EU EEA row
+
+Voice event Roaming Leg charge
+
+ 
+
+ 4
+
+Outgoing call to Sky Mobile voicemail
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → Roaming outside of EU EEA to voicemail
+
+Sky Business Default International and Roaming Rates → B2B Roaming outside of EU EEA → Roaming outside of EU EEA to voicemail
+
+Outgoing call to Sky Mobile voicemail
+
+ 5
+
+Call forward to voice mail while roaming outside of EU EEA
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → Call forward to voice mail while roaming outside of EU EEA
+
+Sky Business Default International and Roaming Rates → B2B Roaming outside of EU EEA → Call forward to voice mail while roaming outside of EU EEA
+
+Call forward to voice mail while roaming outside of EU EEA
+
+6
+
+Call forward while roaming outside of EU EEA
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → Call forward while roaming outside of EU EEA
+
+Sky Business Default International and Roaming Rates → B2B Roaming outside of EU EEA → Call forward while roaming outside of EU EEA
+
+Call forward while roaming outside of EU EEA
+
+7
+
+SMS
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → SMS Roaming outside of EU EEA row
+
+Sky Default international and roaming rates → B2B Roaming outside of EU EEA → SMS Roaming outside of EU EEA row
+
+SMS event Roaming Leg charge
+
+8
+
+MMS
+
+Sky Default international and roaming rates → Roaming outside of EU EEA → MMS Roaming outside of EU EEA row
+
+Sky Business Default International and Roaming Rates → B2B Roaming outside of EU EEA → MMS Roaming outside of EU EEA row
+
+MMS Roaming outside of EU EEA row
+
+9
+
+ 0800 number MO
+
+Sky Default international and roaming rates → Roaming rate for International 00800 → Roaming rate for international 0800 row
+
+Sky Business Default International and Roaming Rates → B2B Roaming rate for International 00800 → Roaming rate for international 0800 row
+
+MO call to 0800 numbers while roaming
+
+10
+
+0800 number MT
+
+Sky Default pay as you use → ROW rate for Sky customer services and incoming free call → ROW rate for NGN MT
+
+Sky Business Default Pay As You Use → B2B ROW rate for Sky customer services and incoming free call → ROW rate for NGN MT
+
+While roaming - MT call from 0800 numbers 
+
+ 
+
+ 
+
+11
+
+Outgoing calls to specific Sky Mobile voicemail & Customer Service numbers - rated and free
+
+
+
+ 
+
+Sky Default pay as you use → ROW rate for Sky customer services and incoming free call → ROW rate for free call
+
+Sky Business Default Pay As You Use → B2B ROW rate for Sky customer services and incoming free call → ROW rate for free call
+
+Outgoing calls to specific Sky Mobile voicemail & Customer Service numbers as per price list
+
+ 
+
+Sky Default pay as you use → ROW rate for Sky customer services and incoming free call → ROW rate for Sky customer services
+
+Sky Business Default Pay As You Use → B2B ROW rate for Sky customer services and incoming free call à ROW rate for Sky customer services
+
+ 
+
+Sky Default pay as you use → ROW rate for Sky customer services and incoming free call → ROW rate for Sky free customer services
+
+Sky Business Default Pay As You Use → B2B ROW rate for Sky customer services and incoming free call → ROW rate for Sky free customer services
+
+Note: “Countries to roaming zone” GRT is shared between UK Retail and B2B. Therefore, changes for UK Retail will also impact B2B. A new column "Config Touch points for B2B/SIMO" has been added to capture it.
+
+6 OCS Change Areas
+6.1 Countries to roaming zone mapping
+Entity Name
+
+Type
+
+New/Change
+
+Comments
+
+Countries to roaming zone
+
+ 
+
+Auxiliary Object
+
+Change
+
+Move destinations from Band 8 to 18 and 6 as per above table
+
+Logical base type "Country code to country zone mega"
+
+ 
+
+As Band 18 is a new band hence we need to configure the roaming price for this band:
+
+ 
+
+Note: Band-18 already present in the GRT 
+
+Entity Name
+
+Type
+
+New/Change
+
+Comments
+
+Countries zones 1
+
+ 
+
+Auxiliary Object
+
+n/a
+
+Logical base type "Country code to country zone mega"
+
+ 
+
+6.2 Config Touch-points given in Section 5
+5. OCS price group Scope for Roaming in Band-18
+
+6.3 Update Country Name details
+Entity Name
+
+Type
+
+As Is
+
+To Be
+
+Comments
+
+Country codes value list
+
+Auxiliary Object
+
+Macedonia
+
+North Macedonia
+
+Section 4.2
+
+ 
+
+ 
+
+7 Validations
+7.1  - select * from skyuk-uk-mobile-cdr-tds-prod.uk_arc_aocs_is.arc_aocs_voice where home_country_name_called='North Macedonia';
+
+ 
+
+"home_country_name_called": "North Macedonia",
+
+[{
+ "load_dt": "2025-07-08 16:14:29.733744 UTC",
+ "file_name": "AOCS.ncbss01.ocs.mimnc_voice_20250708163816_032029.dat.273066.gz",
+ "node_id": "ncbss01.ocs.mimnc",
+ "file_dt": "2025-07-08 16:38:16.000000 UTC",
+ "file_seq": "32029",
+ "event_id": "407186269049362428",
+ "event_split_reason": "N",
+ "event_start_time": "2025-07-08T15:10:10",
+ "event_end_time": "2025-07-08T15:10:10",
+ "event_local_start_time": "2025-07-08T16:10:10",
+ "event_local_end_time": "2025-07-08T16:10:10",
+ "object_type": "S",
+ "external_subscriber_id": "17071293904612186567564",
+ "customer_id": "264233961672015477",
+ "subscriber_id": "2559277032511102990",
+ "primary_resource_value": "7359719032",
+ "bill_cycle_identifier": "20250712",
+ "service_subtype": "13",
+ "session_id": "dtdro.mntas01.englo.ims.mnc057.mcc234.3gppnetwork.org;3960976209;44296798;beid:GISU-14.mntas01-englo.local;16478;2828;1936;0",
+ "internal_result_code": "2001",
+ "uom": "S",
+ "actual_usage": "0",
+ "rounded_unit": "0",
+ "service_type": "2",
+ "charge_amount": "0",
+ "calling_number": "447359719032",
+ "imsi_calling_party": "234570010969056",
+ "calling_party_roaming_info": "ims.mnc057.mcc234.3gppnetwork.org",
+ "primary_offer_id": "100000001",
+ "charged_number": "447359719032",
+ "roaming_ind": "N",
+ "home_country_code_calling": "GBR",
+ "network_code_calling_party": "2",
+ "roaming_country_code_calling": "GBR",
+ "roaming_network_code_calling": "0",
+ "is_online": "Y",
+ "cycle_start_time": "20250612000000",
+ "last_effect_offer_id": "66173",
+ "charge_code_info_code1": "3003",
+ "charge_code_info_name1": "International",
+ "charge_code_info_amount1": "0",
+ "charge_code_info_code2": null,
+ "charge_code_info_name2": null,
+ "charge_code_info_amount2": "0",
+ "charge_code_info_code3": null,
+ "charge_code_info_name3": null,
+ "charge_code_info_amount3": "0",
+ "home_country_name_calling": "United Kingdom",
+ "roaming_country_name_calling": "United Kingdom",
+ "debit_amount": "0",
+ "currency_ind": "GBP",
+ "external_customer_id": "624888169650",
+ "service_filter": "VOICEDOMESTICINTFIXE",
+ "imei": "358577785389920",
+ "ocs_site_id": "10",
+ "pricing_item_id": "65723",
+ "payment_type": "POST",
+ "roaming_zone": null,
+ "originating_category": "DOMEST",
+ "destination_category": "INTF",
+ "rerate_indicator": "N",
+ "discount_amount": "0",
+ "cd_usage": "N",
+ "refund_ind": "N",
+ "unapplied_allowance": "0",
+ "undebit_amount": "0",
+ "duration": "0",
+ "recipient_number": "+389071311313",
+ "called_number": "389071311313",
+ "imsi_called_party": null,
+ "call_direction": "1",
+ "call_forwarding_flag": "00",
+ "called_party_roaming_info": null,
+ "event_charging_time": "2025-07-08T15:10:10",
+ "termination_reason": "1487",
+ "access_prefix": null,
+ "access_prefix_type": "N",
+ "redirecting_number": null,
+ "location_area_calling": "-1",
+ "home_country_code_called": "MKD",
+ "home_area_code_called": "-1",
+ "network_code_called_party": "10",
+ "roaming_country_code_called": null,
+ "roaming_network_code_called": "0",
+ "special_number_ind": "N",
+ "ims_identifier": "p686d34d100047b19c118b245",
+ "home_country_name_called": "North Macedonia",
+ "roam_country_name_called": null,
+ "home_area_name_called": "Default national mobile",
+ "free_duration_consumed": "0",
+ "mcc_visited": "234",
+ "mnc_visited": "57",
+ "lac_visited": null,
+ "cell_id": "2341000a0818c378",
+ "vlr_number": null,
+ "on_net": "1",
+ "dialed_number": null,
+ "ani_info": "3GPP-E-UTRAN;utran-cell-id-3gpp\u003d2341000a0818c378;network-provided",
+ "special_number_group": null,
+ "network_type": "6",
+ "rpp_state": "0",
+ "idd_band": "E",
+ "service_call_desc": null
+}]
+
+ 
+
+7.2 
+
+select * from skyuk-uk-mobile-cdr-tds-prod.uk_arc_aocs_is.arc_aocs_voice where roaming_country_name_calling in ('North Macedonia','Grenada','Saint Vincent and the Grenadines')
+and TIMESTAMP_TRUNC(event_local_start_time, DAY) > '2025-07-08T00:00:00';
+
+"roaming_zone": "18",
+
+ 
+
+[{
+ "load_dt": "2025-07-09 06:08:39.212202 UTC",
+ "file_name": "AOCS.ncbss01.ocs.mimnc_voice_20250709055702_032229.dat.273261.gz",
+ "node_id": "ncbss01.ocs.mimnc",
+ "file_dt": "2025-07-09 05:57:02.000000 UTC",
+ "file_seq": "32229",
+ "event_id": "408046272116040302",
+ "event_split_reason": "N",
+ "event_start_time": "2025-07-09T04:29:19",
+ "event_end_time": "2025-07-09T04:29:51",
+ "event_local_start_time": "2025-07-09T05:29:19",
+ "event_local_end_time": "2025-07-09T05:29:51",
+ "object_type": "S",
+ "external_subscriber_id": "15934376299801930143204",
+ "customer_id": "7037616551384314634",
+ "subscriber_id": "3301839769518439478",
+ "primary_resource_value": "7718491658",
+ "bill_cycle_identifier": "20250801",
+ "service_subtype": "15",
+ "session_id": "dtdro.mntas01.enbgk.ims.mnc057.mcc234.3gppnetwork.org;3961024159;120666004;beid:GISU-14.mntas01-enbgk.local;16478;2828;11982;0",
+ "internal_result_code": "2001",
+ "uom": "S",
+ "actual_usage": "32",
+ "rounded_unit": "60",
+ "service_type": "2",
+ "charge_amount": "36",
+ "calling_number": "447718491658",
+ "imsi_calling_party": "234570004915407",
+ "calling_party_roaming_info": "1473",
+ "primary_offer_id": "100000001",
+ "charged_number": "447718491658",
+ "roaming_ind": "Y",
+ "home_country_code_calling": "GBR",
+ "network_code_calling_party": "2",
+ "roaming_country_code_calling": "GRD",
+ "roaming_network_code_calling": "2",
+ "is_online": "Y",
+ "cycle_start_time": "20250701000000",
+ "last_effect_offer_id": "66173",
+ "charge_code_info_code1": "3303",
+ "charge_code_info_name1": "Roaming MO ROW VAT",
+ "charge_code_info_amount1": "36",
+ "charge_code_info_code2": "3007",
+ "charge_code_info_name2": "Voicemail",
+ "charge_code_info_amount2": "0",
+ "charge_code_info_code3": null,
+ "charge_code_info_name3": null,
+ "charge_code_info_amount3": "0",
+ "home_country_name_calling": "United Kingdom",
+ "roaming_country_name_calling": "Grenada",
+ "debit_amount": "36",
+ "currency_ind": "GBP",
+ "external_customer_id": "623894907640",
+ "service_filter": "VOICEROAMROWVOICML",
+ "imei": null,
+ "ocs_site_id": "10",
+ "pricing_item_id": "238339",
+ "payment_type": "POST",
+ "roaming_zone": "18",
+ "originating_category": "RROW",
+ "destination_category": "VOICML",
+ "rerate_indicator": "N",
+ "discount_amount": "0",
+ "cd_usage": "N",
+ "refund_ind": "N",
+ "unapplied_allowance": "0",
+ "undebit_amount": "0",
+ "duration": "32",
+ "recipient_number": "759",
+ "called_number": "44759",
+ "imsi_called_party": null,
+ "call_direction": "1",
+ "call_forwarding_flag": "00",
+ "called_party_roaming_info": null,
+ "event_charging_time": "2025-07-09T04:29:19",
+ "termination_reason": "0",
+ "access_prefix": null,
+ "access_prefix_type": "N",
+ "redirecting_number": null,
+ "location_area_calling": "-1",
+ "home_country_code_called": "GBR",
+ "home_area_code_called": "-1",
+ "network_code_called_party": "0",
+ "roaming_country_code_called": null,
+ "roaming_network_code_called": "0",
+ "special_number_ind": "Y",
+ "ims_identifier": "REeIAlAB4Kgr6UkSzAVRQAUn",
+ "home_country_name_called": "United Kingdom",
+ "roam_country_name_called": null,
+ "home_area_name_called": "Default national mobile",
+ "free_duration_consumed": "0",
+ "mcc_visited": "352",
+ "mnc_visited": "112",
+ "lac_visited": null,
+ "cell_id": null,
+ "vlr_number": "1473",
+ "on_net": "1",
+ "dialed_number": "sip:759@ims.mnc057.mcc234.3gppnetwork.org;user\u003dphone",
+ "ani_info": "3GPP-GERAN;network-provided;cgi-3gpp\u003d35211001f56795;local-time-zone\u003d\"UTC+00:00\";daylight-saving-time\u003d\"00\"",
+ "special_number_group": "759",
+ "network_type": "2",
+ "rpp_state": "0",
+ "idd_band": null,
+ "service_call_desc": "Voice mail"
+}]
+
+ 
+
+8. Appendix
+Appendix 1 - Reference
+Link
+
+Comments
+
+A-OCS CCB Request portal for LAB (TB1&2 and PET)
+
+CCB
+
+PLM-250 Add MCCMNC for Benin (SCTASK2046778)
+
+PLM-250
+
+C1 Releases - Incrementals
+
+C1 incremental
+
+Kanban Board - CICAF-246
+
+Kanban
+
+ 
+
+Other 800 prefix elements
+
+Sky Default pay as you use → Pay as you use band1 customer services and incoming free call → Pay as you use to free call – not required
+
+Sky Default pay as you use → RPP rate for Sky customer services and incoming free call → Roaming rate for incoming free call  – not required
+
+Sky Business Default Pay As You Use → B2B RPP rate for Sky customer services and incoming free call → Roaming rate for incoming free call – not required
+
+Sky Business Default Pay As You Use → B2B EUEEA Roaming rate for Sky customer services and incoming free call → EUEEA Roaming rate for free call – not required
+
+ 
+
+Test exit report
+
+PLM report.docx
+
+PLM 284ph2 371 400 TER v1.pdf
+
+
+
+Testcases:
+
+${TC_ID}	${A_Party}	${B_Party}	${Call_Type}	${Duration_BytesUsed}	${Roaming_Location}	${Called_Country}	${B_Party_Type}	${Expected_Results}	${Expected_Data_Free_Units}	${OCS_Response}	[Tags]	[Documentation]
+TC-SMS-PLM284-Grenada-007	4.47301E+11	4.47301E+11	mo-sms	60	Grenada	UK	Mobile	12	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-SMS-PLM284-Macedonia-008	4.47301E+11	4.47301E+11	mo-sms	60	Macedonia	UK	Mobile	12	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-SMS-PLM284-Saint Vincent-009	4.47301E+11	4.47301E+11	mo-sms	60	Saint Vincent and the Grenadines	UK	Mobile	12	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-DATA-PLM284-Grenada-010	4.47301E+11		data	1048576	Grenada		Mobile	7	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-DATA-PLM284-Macedonia-011	4.47301E+11		data	1048576	Macedonia		Mobile	7	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-DATA-PLM284-Saint Vincent-012	4.47301E+11		data	1048576	Saint Vincent and the Grenadines		Mobile	7	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MT_Voice-PLM284-Grenada to UK-013	4.47301E+11	+447301222089	n-mt-voice	60	Grenada	UK	Mobile	14	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MT_Voice-PLM284-Macedonia to UK-014	4.47301E+11	+447301222089	n-mt-voice	60	Macedonia	UK	Mobile	14	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MT_Voice-PLM284-Saint Vincent to UK-015	4.47301E+11	+447301222089	n-mt-voice	60	Saint Vincent and the Grenadines	UK	Mobile	14	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-PLM284-Grenada to ROW-016	4.47301E+11	+2697730000	n-mo-voice	60	Grenada	Comoros	Landline	386	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-PLM284-Macedonia to ROW-017	4.47301E+11	+16464550952	n-mo-voice	60	Macedonia	USA	Mobile	386	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-PLM284-Saint Vincent to ROW-018	4.47301E+11	+12644971111	n-mo-voice	60	Saint Vincent and the Grenadines	Anguilla	Landline	386	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voicemail-PLM284-Grenada-019	4.47301E+11	+447488222000	n-mo-voice	60	Grenada	UK	Voicemail	36	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-skycontact-PLM284-Grenada-020	4.47301E+11	+441312783778	n-mo-voice	60	Grenada	UK	Sky_Contact_Centres	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Intl-PLM284-Grenada-021	4.47301E+11	+80017777777	n-mo-voice	60	Grenada	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-MT_Voice-Intl-PLM284-Grenada-022	4.47301E+11	+80017777777	n-mt-voice	60	Grenada	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from ${B_Party_Type} ${B_Party} in ${Called_Country} to Sky Mobile ${A_Party} in ${Roaming_Location} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Custser-PLM284-Grenada-023	4.47301E+11	+441506476000	n-mo-voice	60	Grenada	UK	Landline:Cust Serv 015	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voicemail-PLM284-Macedonia-024	4.47301E+11	+447488222000	n-mo-voice	60	Macedonia	UK	Voicemail	36	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-skycontact-PLM284-Macedonia-025	4.47301E+11	+441312783778	n-mo-voice	60	Macedonia	UK	Sky_Contact_Centres	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Intl-PLM284-Macedonia-026	4.47301E+11	+80017777777	n-mo-voice	60	Macedonia	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-MT_Voice-Intl-PLM284-Macedonia-027	4.47301E+11	+80017777777	n-mt-voice	60	Macedonia	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from ${B_Party_Type} ${B_Party} in ${Called_Country} to Sky Mobile ${A_Party} in ${Roaming_Location} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Custser-PLM284-Macedonia-028	4.47301E+11	+441506476000	n-mo-voice	60	Macedonia	UK	Landline:Cust Serv 016	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voicemail-PLM284-Saint Vincent-029	4.47301E+11	+447488222000	n-mo-voice	60	Saint Vincent and the Grenadines	UK	Voicemail	36	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-skycontact-PLM284-Saint Vincent-030	4.47301E+11	+441312783778	n-mo-voice	60	Saint Vincent and the Grenadines	UK	Sky_Contact_Centres	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Intl-PLM284-Saint Vincent-031	4.47301E+11	+80017777777	n-mo-voice	60	Saint Vincent and the Grenadines	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-MT_Voice-Intl-PLM284-Saint Vincent-032	4.47301E+11	+80017777777	n-mt-voice	60	Saint Vincent and the Grenadines	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from ${B_Party_Type} ${B_Party} in ${Called_Country} to Sky Mobile ${A_Party} in ${Roaming_Location} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Custser-PLM284-Saint Vincent-033	4.47301E+11	+441506476000	n-mo-voice	60	Saint Vincent and the Grenadines	UK	Landline:Cust Serv 017	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+ROAM-INT-BAND8-VOICE-Reg-034	4.47301E+11	+447797716515	n-mo-voice	60	Andorra	Jersey	Mobile	216	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+ROAM-INT-BAND8-VOICE-Reg-035	4.47301E+11	+32460943658	n-mo-voice	60	Bermuda	Belgium	Mobile	271	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+ROAM-INT-BAND8-VOICE-Reg-036	4.47301E+11	+37744113889	n-mo-voice	60	Kazakhstan	Monaco	Mobile	566	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-B2B-PLM284-Grenada to UK-037	4.47301E+11	+447301222089	n-mo-voice	60	Grenada	UK	Mobile	3000	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-B2B-PLM284-Macedonia to UK-038	4.47301E+11	+447301222089	n-mo-voice	60	Macedonia	UK	Mobile	3000	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-B2B-PLM284-Saint Vincent to UK-039	4.47301E+11	+447301222089	n-mo-voice	60	Saint Vincent and the Grenadines	UK	Mobile	3000	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MMS-B2B-PLM284-Grenada-040	4.47301E+11	4.47301E+11	mms	60	Grenada	UK	Mobile	4833	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MMS-B2B-PLM284-Macedonia-041	4.47301E+11	4.47301E+11	mms	60	Macedonia	UK	Mobile	4833	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MMS-B2B-PLM284-Saint Vincent-042	4.47301E+11	4.47301E+11	mms	60	Saint Vincent and the Grenadines	UK	Mobile	4833	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-SMS-B2B-PLM284-Grenada-043	4.47301E+11	4.47301E+11	mo-sms	60	Grenada	UK	Mobile	1167	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-SMS-B2B-PLM284-Macedonia-044	4.47301E+11	4.47301E+11	mo-sms	60	Macedonia	UK	Mobile	1167	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-SMS-B2B-PLM284-Saint Vincent-045	4.47301E+11	4.47301E+11	mo-sms	60	Saint Vincent and the Grenadines	UK	Mobile	1167	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-DATA-B2B-PLM284-Grenada-046	4.47301E+11		data	1048576	Grenada		Mobile	583	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-DATA-B2B-PLM284-Macedonia-047	4.47301E+11		data	1048576	Macedonia		Mobile	583	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-DATA-B2B-PLM284-Saint Vincent-048	4.47301E+11		data	1048576	Saint Vincent and the Grenadines		Mobile	583	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MT_Voice-B2B-PLM284-Grenada to UK-049	4.47301E+11	+447301222089	n-mt-voice	60	Grenada	UK	Mobile	1167	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MT_Voice-B2B-PLM284-Macedonia to UK-050	4.47301E+11	+447301222089	n-mt-voice	60	Macedonia	UK	Mobile	1167	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-MT_Voice-B2B-PLM284-Saint Vincent to UK-051	4.47301E+11	+447301222089	n-mt-voice	60	Saint Vincent and the Grenadines	UK	Mobile	1167	0	2001	Sanity	== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-B2B-PLM284-Grenada to ROW-052	4.47301E+11	+2697730000	n-mo-voice	60	Grenada	Comoros	Landline	386	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-B2B-PLM284-Macedonia to ROW-053	4.47301E+11	+16464550952	n-mo-voice	60	Macedonia	USA	Mobile	386	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voice-B2B-PLM284-Saint Vincent to ROW-054	4.47301E+11	+12644971111	n-mo-voice	60	Saint Vincent and the Grenadines	Anguilla	Landline	386	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+TC-Voicemail-B2B-PLM284-Grenada-055	4.47301E+11	+447488222000	n-mo-voice	60	Grenada	UK	Voicemail	3000	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-skycontact-B2B-PLM284-Grenada-056	4.47301E+11	+441312783778	n-mo-voice	60	Grenada	UK	Sky_Contact_Centres	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Intl-B2B-PLM284-Grenada-057	4.47301E+11	+80017777777	n-mo-voice	60	Grenada	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-MT_Voice-Intl-B2B-PLM284-Grenada-058	4.47301E+11	+80017777777	n-mt-voice	60	Grenada	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from ${B_Party_Type} ${B_Party} in ${Called_Country} to Sky Mobile ${A_Party} in ${Roaming_Location} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Custser-B2B-PLM284-Grenada-059	4.47301E+11	+441506476000	n-mo-voice	60	Grenada	UK	Landline:Cust Serv 015	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voicemail-B2B-PLM284-Macedonia-060	4.47301E+11	+447488222000	n-mo-voice	60	Macedonia	UK	Voicemail	3000	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-skycontact-B2B-PLM284-Macedonia-061	4.47301E+11	+441312783778	n-mo-voice	60	Macedonia	UK	Sky_Contact_Centres	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Intl-B2B-PLM284-Macedonia-062	4.47301E+11	+80017777777	n-mo-voice	60	Macedonia	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-MT_Voice-Intl-B2B-PLM284-Macedonia-063	4.47301E+11	+80017777777	n-mt-voice	60	Macedonia	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from ${B_Party_Type} ${B_Party} in ${Called_Country} to Sky Mobile ${A_Party} in ${Roaming_Location} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Custser-B2B-PLM284-Macedonia-064	4.47301E+11	+441506476000	n-mo-voice	60	Macedonia	UK	Landline:Cust Serv 016	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voicemail-B2B-PLM284-Saint Vincent-065	4.47301E+11	+447488222000	n-mo-voice	60	Saint Vincent and the Grenadines	UK	Voicemail	3000	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-skycontact-B2B-PLM284-Saint Vincent-066	4.47301E+11	+441312783778	n-mo-voice	60	Saint Vincent and the Grenadines	UK	Sky_Contact_Centres	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Intl-B2B-PLM284-Saint Vincent-067	4.47301E+11	+80017777777	n-mo-voice	60	Saint Vincent and the Grenadines	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-MT_Voice-Intl-B2B-PLM284-Saint Vincent-068	4.47301E+11	+80017777777	n-mt-voice	60	Saint Vincent and the Grenadines	International 00800	Landline:00800	0	0	2001	Roaming	"== Roaming ${Call_Type} call from ${B_Party_Type} ${B_Party} in ${Called_Country} to Sky Mobile ${A_Party} in ${Roaming_Location} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+TC-Voice-Custser-B2B-PLM284-Saint Vincent-069	4.47301E+11	+441506476000	n-mo-voice	60	Saint Vincent and the Grenadines	UK	Landline:Cust Serv 017	0	0	2001	Roaming	"== Roaming ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in the ${Called_Country} ==
+| =Results= | =Expected= | =Actual= |
+| *Call Cost* | *${Expected_Result}* | *${Actual_Result}* |
+| *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* |
+| *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |"
+ROAM-INT-BAND8-VOICE-B2B-Reg-070	4.47301E+11	+447797716515	n-mo-voice	60	Bangladesh	Jersey	Mobile	6000	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+ROAM-INT-BAND8-VOICE-B2B-Reg-071	4.47301E+11	+32460943658	n-mo-voice	60	Qatar	Belgium	Mobile	10583	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |
+ROAM-INT-BAND8-VOICE-B2B-Reg-072	4.47301E+11	+37744113889	n-mo-voice	60	Moldova	Monaco	Mobile	"30,416"	0	2001	Sanity	'== IDD ${Call_Type} call from Sky Mobile ${A_Party} in the ${Roaming_Location} to ${B_Party_Type} ${B_Party} in ${Called_Country} ==| =Results= | =Expected= | =Actual= || *Call Cost* | *${Expected_Result}* | *${Actual_Result}* || *Data Used* | *${Expected_Used_Units}* | *${Actual_Used_Units}* || *OCS Response Code* | *${Expected_OCS_Response}* | *${Actual_OCS_Response}* |

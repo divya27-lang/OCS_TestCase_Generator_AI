@@ -1,0 +1,23 @@
+Synthetic Roaming Functional Specification and Testcases
+1. Version Control
+VersionDateCreatorDescription0.1Jan 5, 2026AI GeneratorInitial synthetic draft0.2Jan 6, 2026AI GeneratorAdded roaming band changes1.0Jan 7, 2026AI GeneratorReleased synthetic version for AI training2. Executive Summary
+This synthetic document simulates a roaming change functional specification for AI training purposes. It includes fabricated roaming bands, country changes, OCS price mappings, and fictional validation outputs.
+3. Required Documentation
+- Synthetic Price List v1.0
+- Synthetic Jira Board (fictional)
+- Synthetic SCTASK1234567
+4. Change Description
+4.1 Roaming charge band changes
+Country CodeCountry NameAs Is BandTo Be BandReferenceSYNSynthesia512SYN-101ALFAlpharia312SYN-1024.2 Country name changes
+Country CodeAs Is NameTo Be NameReferenceALFAlphariaAlpharia RepublicSYN-2025. OCS Price Group Scope for Roaming in Band-12
+This section includes synthetic OCS mappings for roaming events across multiple services.
+6. OCS Change Areas
+6.1 Countries to roaming zone mapping (synthetic)
+6.2 Config touchpoints
+6.3 Updated country list
+7. Validations
+SELECT sample SQL validation outputs have been synthetically generated.
+8. Appendix
+Synthetic references and test data.
+9. Testcases (Sample Subset)
+TC_IDA_PartyB_PartyCall_TypeDurationRoaming_LocationCalled_CountryB_Party_TypeExpected_ResultsFree_UnitsOCS_ResponseTagsDocumentationTC-SMS-SYN-001447500111222447500111222mo-sms60SynthesiaUKMobile1002001SanitySynthetic test descriptionTC-VOICE-SYN-002447500111222+44550111222n-mo-voice120AlphariaUSAMobile3202001SanitySynthetic voice session test
